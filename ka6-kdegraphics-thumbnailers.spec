@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.103.0
 %define		qtver		5.15.2
 %define		kaname		kdegraphics-thumbnailers
 Summary:	KDE graphics thumbnailers
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	6aedfe16916e0da3ba7a2cb6d95e5cf6
+# Source0-md5:	446ee1547ba0212c0b75520d9346bf9f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -67,8 +67,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %dir %{_libdir}/qt6/plugins/kf6/thumbcreator
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/thumbcreator/blenderthumbnail.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/thumbcreator/gsthumbnail.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/thumbcreator/mobithumbnail.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/thumbcreator/rawthumbnail.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/blenderthumbnail.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/gsthumbnail.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/mobithumbnail.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/rawthumbnail.so
 %{_datadir}/metainfo/org.kde.kdegraphics-thumbnailers.metainfo.xml
